@@ -1,0 +1,43 @@
+/* p-card start */
+p-card {
+    margin-top: 100px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    padding: 60px 10px;
+    width: 20%;
+    margin-left: 40%;
+    opacity: 80%
+}
+
+p-card:hover {
+    opacity: 100%
+}
+
+/* p-card end */
+
+button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+label,
+input {
+    margin-top: 5px;
+}
+
+input {
+    width: 300px;
+}
+
+/* start forgot password link */
+
+.forgetPasswordLink {
+    color: white;
+}
+
+.forgetPasswordLink:hover {
+    color: rgb(182, 182, 182);
+}
+
+/* end forgot password link */

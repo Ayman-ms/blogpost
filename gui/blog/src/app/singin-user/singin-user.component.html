@@ -1,0 +1,28 @@
+<p-card [style]="{'font-weight': 'bold' }">
+    <div class="cardDiv">
+        <h3>Login</h3>
+        <label for="">Name: </label><br>
+        <input [(ngModel)]="userToLogin.userName" type="text">
+        <br>
+
+        <label for="">Password: </label><br>
+        <input [(ngModel)]="userToLogin.password" type="password">
+        <div class="row">
+            <div class="col-6">
+                <button pButton class="saveButton btn text-blue rounded-pill login-btn mt-4 mb-2" type="submit" pRipple
+                    (click)="loginClick()">
+                    Login
+                </button>
+            </div>
+            <!-- <ng-template pTemplate="body" let-user> -->
+            <div class="col-6 mt-4 forgetPasswordLink">
+
+                <a class="forgetPasswordLink text-end" [routerLink]="'/sendcode'">Forgot Password?</a>
+
+            </div>
+            <!-- </ng-template> -->
+        </div>
+    </div>
+
+
+</p-card>

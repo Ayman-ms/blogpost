@@ -1,0 +1,69 @@
+<form [formGroup]="userForm" ngForm="userForm">
+    <div class="grid p-ls-1 p-2 p-lg-3 position-absolute top-50 start-50 translate-middle">
+        <p-card [style]="{'font-weight': 'bold' }">
+
+            <div class="col-12">
+                <label for="">{{userToEdit.userName }} profile</label>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <label for="">New Name: </label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="inputTool" [(ngModel)]="userToEdit.userName">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4"><label for="">New Password: </label>
+                </div>
+                <div class="col-8">
+                    <p-password class="inputTool" [(ngModel)]="userToEdit.password" formControlName="passwordControl">
+                        <ng-template pTemplate="header">
+                            <h6>Pick a password</h6>
+                        </ng-template>
+                        <ng-template pTemplate="footer">
+                            <p-divider></p-divider>
+                            <p class="p-mt-2">Suggestions</p>
+                            <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
+                                <li>At least one lowercase</li>
+                                <li>At least one uppercase</li>
+                                <li>At least one numeric</li>
+                                <li>Minimum 6 characters</li>
+                            </ul>
+                        </ng-template>
+                    </p-password>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <label for="">New E-mail: </label>
+                </div>
+                <div class="col-8">
+                    <input class="inputTool" type="text" [(ngModel)]="userToEdit.email">
+                </div>
+            </div>
+
+            <div class="row" *ngIf="userIsAdmin">
+                <div class="col-4">
+                    <label for="">Roll:</label>
+                </div>
+                <div class="col-8">
+                    <select class="form-select col-10" [(ngModel)]="userToEdit.roll" id="floatingSelect"
+                        aria-label="Floating label select">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button class="saveButton" type="submit" [disabled]="!userForm.valid" pButton (click)="updateClick()">
+                    Update
+                </button>
+            </div>
+        </p-card>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+<p-table class='usersDetails p-2 p-lg-3' [value]="userList || []" responsiveLayout="scroll">
+
+    <ng-template pTemplate="caption" class="usersTemplet">
+        <div class="flex align-items-center justify-content-between">
+            <h3 class="h3Users">Users:</h3>
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="header" class="fs-6">
+        <tr>
+            <th class="col-1 fs-6">ID: </th>
+            <th class="col-2 fs-6">Name: </th>
+            <!-- <th class="col-2">Password: </th> -->
+            <th class="col-2 fs-6">E-mail: </th>
+            <th class="col-3 fs-6">Roll: </th>
+            <th class="col-2 fs-6">Edit</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-user class="fs-6">
+        <tr>
+            <td class="col-1 fs-6">{{user.id}}</td>
+            <td class="col-2 fs-6">{{user.userName }}</td>
+            <!-- <td class="col-2" >{{user.password}}d</td> -->
+            <td class="col-2 fs-6">{{user.email}}</td>
+            <td class="col-2 fs-6">{{user.roll}}</td>
+            <td class="clickTd col-2">
+                <button pButton class="bearbeitenButton" [routerLink]="'/editUser'"
+                    [queryParams]="{id:user.id}">Edit</button>
+                <button pButton class="loschenButton" (click)="deleteUserClick(user.id)">Delete</button>
+            </td>
+        </tr>
+    </ng-template>
+
+</p-table>

@@ -1,0 +1,34 @@
+/* p-card start */
+p-card {
+    margin-top: 100px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    padding: 60px 10px;
+    width: 500px;
+    margin-left: calc((100% - 500px) / 2);
+    /* opacity: 80% */
+}
+
+/* p-card:hover {
+    opacity: 100%
+} */
+
+/* p-card end */
+button {
+    margin-top: 15px;
+}
+
+label,
+input {
+    margin-top: 5px;
+}
+
+/* input, */
+.userPassword {
+    width: 300px;
+}
+
+input {
+    width: 300px;
+}

@@ -1,0 +1,37 @@
+/* p-card start */
+p-card {
+    margin-top: 100px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    padding: 60px 10px;
+    width: 25%;
+    margin-left: 40%;
+    opacity: 80%
+}
+
+p-card:hover {
+    opacity: 100%
+}
+
+body {
+    background-image: url(/src/app/img/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* p-card end */
+
+button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+label,
+input {
+    margin-top: 5px;
+}
+
+input {
+    width: 250px;
+}

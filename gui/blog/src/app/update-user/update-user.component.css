@@ -1,0 +1,23 @@
+p-card {
+    font-weight: bold;
+    display: block;
+    float: left;
+    /* padding: 0px 10px; */
+    width: 500px;
+    margin-left: calc((100% - 500px) / 2);
+}
+
+
+button {
+    margin-top: 15px;
+}
+
+label,
+input {
+    margin-top: 5px;
+}
+
+/* input, */
+.inputTool {
+    width: auto;
+}

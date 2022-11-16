@@ -1,0 +1,16 @@
+<p-card header="New Item" [style]="{'font-weight': 'bold'}">
+    <div class="col-3">
+        <label for="title">Title: </label>
+    </div>
+    <div class="col-9">
+        <input type="text" [(ngModel)]="blogpostToAdd.title" pInputText>
+    </div>
+    <div class="col-3">
+        <label for="body">Body: </label>
+    </div>
+    <div class="col-9">
+        <p-editor [(ngModel)]="blogpostToAdd.body" [style]="{'height':'320px','width':'540px'}"></p-editor>
+    </div>
+    <div> <button pButton class="saveButton" type="submit" label="Post" (click)="newPost()"></button>
+    </div>
+</p-card>

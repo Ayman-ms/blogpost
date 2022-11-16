@@ -1,0 +1,45 @@
+<form [formGroup]="userForm" ngForm="userForm">
+    <p-card [style]="{'font-weight': 'bold' }">
+        <div class="cardDiv">
+            <h3>Create New User</h3>
+            <div class="grid">
+                <div class="col-3"><label for="">Name: </label>
+                </div>
+                <div class="col-9"><input type="text" [(ngModel)]="userToAdd.userName"
+                        formControlName="userNameControl">
+                </div>
+                <div class="col-3"><label for="">Password: </label>
+                </div>
+                <div class="col-9">
+                    <p-password [(ngModel)]="userToAdd.password" formControlName="passwordControl">
+                        <ng-template pTemplate="header">
+                            <h6>Pick a password</h6>
+                        </ng-template>
+                        <ng-template pTemplate="footer">
+                            <p-divider></p-divider>
+                            <p class="p-mt-2">Suggestions</p>
+                            <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
+                                <li>At least one lowercase</li>
+                                <li>At least one uppercase</li>
+                                <li>At least one numeric</li>
+                                <li>Minimum 6 characters</li>
+                            </ul>
+                        </ng-template>
+                    </p-password>
+                </div>
+                <div class="col-3"><label for="">E-mail: </label>
+                </div>
+                <div class="col-9"><input type="email" [(ngModel)]="userToAdd.email" formControlName="emailControl">
+                </div>
+                <div class="col-3"><label for="">Roll: </label>
+                </div>
+                <div class="col-9"><input type="text" value="user" readonly [(ngModel)]="userToAdd.roll">
+                </div>
+            </div>
+            <button class="saveButton" pRipple type="submit" [disabled]="!userForm.valid" pButton (click)="newUser()">
+                Sing Up
+            </button>
+        </div>
+
+    </p-card>
+</form>

@@ -1,0 +1,29 @@
+<form [formGroup]="emailForm" ngForm="emailForm">
+
+    <p-card [style]="{'font-weight': 'bold' }">
+
+        <div class="col-12">
+            <label for="">Password recovery</label>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <label for="">E-mail: </label>
+            </div>
+            <div class="col-9">
+                <input type="text" formControlName="emailControl">
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <button class="sendEmail btn text-white rounded-pill login-btn mt-4 mb-2" pRipple type="submit" pButton
+                    (click)="sendCode()">
+                    Send Link..
+                </button>
+            </div>
+        </div>
+
+    </p-card>
+
+</form>

@@ -1,0 +1,13 @@
+.navbar {
+    width: auto;
+}
+
+.active-link {
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-brand.active,
+.navbar .navbar-nav .nav-brand:focus,
+.navbar .navbar-nav .nav-brand:hover {
+    color: rgb(10, 8, 8);
+}

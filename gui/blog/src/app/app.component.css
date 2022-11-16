@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.8em;
+    padding-left: 30px;
+}
+
+
+a:hover {
+    color: rgb(9, 17, 83);
+}
+
+header {
+    background-color: #7f7e7e;
+    width: 100%;
+    position: fixed;
+    display: fixed;
+    z-index: 999;
+    padding: 10px 200px;
+    border-bottom-color: #000;
+    height: 60px;
+
+}
+
+.normalLink {
+    display: fixed;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+
+.singingLink {
+    top: 2.5%;
+    left: 85%;
+    font-size: 7px;
+    vertical-align: text-bottom;
+    position: fixed;
+    display: fixed;
+}
+
+.test2 {
+    background-image: url(/assets/bodyBackground2.jpg);
+    background-position: center top;
+    background-size: cover;
+
+}
+
+.test {
+    background-image: url(/assets/about.png);
+    background-position: center top;
+    background-size: cover;
+
+}

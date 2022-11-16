@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #84A98C;
+    --secondary-color: #dedede
+}
+
+body {
+    background-image: url(/assets/bodyBackground2.jpg);
+    background-position: center top;
+    background-size: cover;
+}

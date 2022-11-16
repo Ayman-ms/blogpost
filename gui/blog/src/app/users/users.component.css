@@ -1,0 +1,16 @@
+Button {
+    margin-left: 5px;
+    /* background-color: rgb(210, 35, 35);
+    border-color: red; */
+}
+
+/* .loschenButton:hover {
+    background-color: rgb(210, 35, 35);
+    color: white;
+    border-color: black;
+} */
+
+Button:hover {
+    border-color: black;
+    color: white;
+}

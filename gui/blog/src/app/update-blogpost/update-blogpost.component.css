@@ -1,0 +1,29 @@
+p-card {
+    margin-top: 25px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    padding: 60px 10px;
+    width: 600px;
+    margin-left: calc((100% - 600px) / 2);
+}
+
+
+label,
+input {
+    margin-top: 5px;
+    width: 540px;
+}
+
+
+button {
+    background-color: #84A98C;
+    border-color: #84A98C;
+    margin-top: 10px;
+}
+
+.saveButton.saveButton:hover {
+    box-shadow: 1px -1px black;
+    background-color: #88bd94;
+    border-color: #52796F;
+}

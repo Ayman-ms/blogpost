@@ -1,0 +1,26 @@
+<!-- new blogpost click -->
+<div class="fixed-bottom mb-7 ms-1 banner">
+    <button pButton *ngIf="userLoggedIn" class="newBlogClick" [routerLink]="'/creatNewItem'">New Blogpost</button>
+</div>
+<!-- blogpost cards -->
+<div class="blogPostDiv row" *ngFor="let blogPost of blogListe">
+    <p-card class="listCards p-2 p-lg-3 col-12 " header={{blogPost.title}}
+        [style]="{'width': '40rem', 'margin-bottom': '1rem', 'margin-top': '1rem'}">
+
+        <div [id]="'blogpostBody'+blogPost.id" [innerHTML]="documentSetHtml(blogPost)">
+
+        </div>
+        <ng-template pTemplate="footer" class="footer row rowalign-items-start">
+
+                <button *ngIf="userLoggedIn" pButton class="bearbeitenButton col-3 " [routerLink]="'/editComponent'"
+                   [queryParams]="{id:blogPost.id}">Post Edit
+               </button>
+               <button class="dislikeIcon" *ngIf="userLoggedIn"><img (click)="likeClick(blogPost)" class="icon" src="/assets/like.png"
+                       alt=""></button>
+               <button class="icon" *ngIf="userLoggedIn"><img (click)="dislikeClick(blogPost)" class="icon"
+                       src="/assets/dislike.png" alt=""></button>
+               <label class="likeLable" for="">That post have {{blogPost.like}} like</label>
+
+        </ng-template>
+    </p-card>
+</div>
