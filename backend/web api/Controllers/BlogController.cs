@@ -14,8 +14,9 @@ namespace web_api.Controllers
             List<BlogPost> blogPosts = new List<BlogPost>();
             if (File.Exists("BlogPosts.json"))
             {
-                blogPosts = JsonSerializer.Deserialize<List<BlogPost>>(File.ReadAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json"));
+                blogPosts = JsonSerializer.Deserialize<List<BlogPost>>(File.ReadAllText(@"E:\Angular\blogsystem\blogpost\backend\web api\BlogPosts.json"));
             }
+#pragma warning disable CS8603 // Possible null reference return.
             return blogPosts;
         }
 
@@ -28,23 +29,30 @@ namespace web_api.Controllers
                 blogPosts=JsonSerializer.Deserialize<List<BlogPost>>(File.ReadAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json"));
             }
             int id=1;
+#pragma warning disable CS8604 // Possible null reference argument.
             if (blogPosts.Count() > 0)
             {
                 id=blogPosts.Max((x)=>x.Id)+1;
             }
+#pragma warning restore CS8604 // Possible null reference argument.
             blogPosts.Add(new BlogPost { Id=id,Title=blogPost.Title,Body=blogPost.Body});
             File.WriteAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json", JsonSerializer.Serialize(blogPosts));
             return id;
         }
         [HttpDelete(Name = "DeleteBlogPost")]
-        public bool DeleteBlogPost(int id)
+        public bool DeleteBlogPost(int id, List<BlogPost>? blogPosts)
         {
-            List<BlogPost> blogPosts = new List<BlogPost>();
+            List<BlogPost> blogPost = new List<BlogPost>();
             if (File.Exists("BlogPosts.json"))
             {
                 blogPosts = JsonSerializer.Deserialize<List<BlogPost>>(File.ReadAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json"));
             }
+
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8604 // Possible null reference argument.
             blogPosts.Remove(blogPosts.Where((x) => x.Id == id).FirstOrDefault());
+#pragma warning restore CS8604 // Possible null reference argument.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             File.WriteAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json", JsonSerializer.Serialize(blogPosts));
             return true;
         }
@@ -59,6 +67,7 @@ namespace web_api.Controllers
             {
                 blogPosts = JsonSerializer.Deserialize<List<BlogPost>>(File.ReadAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json"));
             }
+#pragma warning disable CS8604 // Possible null reference argument.
             if (blogPosts.Count() > 0)
             {
                 var blogPostToEdit = blogPosts.Where((x) => x.Id == blogPost.Id).First();
@@ -68,6 +77,7 @@ namespace web_api.Controllers
                 File.WriteAllText(@"E:\Angular\blogsystem\backend\web api\BlogPosts.json", JsonSerializer.Serialize(blogPosts));
                 return true;
             }
+#pragma warning restore CS8604 // Possible null reference argument.
             return false;
         }
     }

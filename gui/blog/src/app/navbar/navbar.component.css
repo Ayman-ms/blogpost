@@ -11,3 +11,13 @@
 .navbar .navbar-nav .nav-brand:hover {
     color: rgb(10, 8, 8);
 }
+
+.dropdown-menu{
+    text-align: start;
+    margin-left: 90%;
+}
+
+.dropdown-item:hover{
+    background-color: #495057;
+    color: #fff;
+}

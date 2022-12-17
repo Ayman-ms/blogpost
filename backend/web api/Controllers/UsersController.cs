@@ -8,7 +8,7 @@ namespace web_api.Controllers
     [Route("[controller]")]
     public class UserController
     {
-        public string userFile = @"E:\Angular\blogsystem\backend\web api\UsersEncrypt.json";
+        public string userFile = @"E:\Angular\blogsystem\blogpost\backend\web api\UsersEncrypt.json";
 
         [HttpGet(Name = "GetAllUsers")]
         public List<User> GetAllUsers()

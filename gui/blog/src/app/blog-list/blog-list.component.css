@@ -1,13 +1,7 @@
-.blogPostDiv div {
-    padding: 50px 50px 0 10px;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.newBlogClick {
+.newBlogClick{
     background-color: #6c9876;
+    border-color: #6c9876;
     color: rgb(238, 233, 233);
-    /* position: fixed; */
     width: 9rem;
     text-align: center;
     height: 3rem;
@@ -15,64 +9,56 @@
     margin-top: 5px;
     font-weight: bold;
 }
+.bearbeitenButton {
+    background-color: #6c9876;
+    border: none;
+    color: rgb(238, 233, 233);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.bearbeitenButton:hover{
+    color: #fff;
+    border: solid;
+    border-color: #fff;
+}
 
 .newBlogClick:hover {
     background-color: #6c9876;
-    border-color: white;
+    border-color: #fff;
+    color: #fff;
 }
 
-/* .blogPostDiv {
-    color: rgb(107, 40, 40);
-} */
+p-card{
+    margin-top: 10px;
+}
 
-.listCards ::ng-deep div {
-    background-color: #ccc;
-    color: #000;
-    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+p-card ::ng-deep div {
     font-weight: bold;
-    display: block;
     border-radius: 5px;
     align-items: center;
     margin: auto;
 }
-
-div.p-card {
-    width: 40rem;
-    height: 10rem;
-}
-
-.bearbeitenButton {
-    background-color: #84A98C;
-    border-color: #84A98C;
-    width: 100px;
-}
-
-.bearbeitenButton:hover {
-    box-shadow: 1px -1px black;
-    background-color: #88bd94;
-    border-color: #52796F;
+.blogPostDiv{
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
 }
 
 
 /* like start */
-.dislikeIcon {
-    height: 20px;
-    border: 0px;
-    background-color: #ccc;
-    margin-left: 250px;
-}
 .icon{
-    background-color: #ccc;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border: 0px;
-    margin: 1px;   
+    margin: 1px;
+    margin-right:10px ;
 }
 
 .icon:hover {
-    width: 21px;
-    height: 21px;
-    
+    width: 41px;
+    height: 41px;
 }
 
 .likeLable{

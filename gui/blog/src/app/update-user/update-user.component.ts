@@ -18,7 +18,7 @@ export class UpdateUserComponent implements OnInit {
   userIsAdmin = false;
   userLoggedIn = false;
   userForm = new FormGroup({
-          
+
     passwordControl: new FormControl(null,
       [Validators.minLength(6),
       Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$"),
@@ -26,8 +26,8 @@ export class UpdateUserComponent implements OnInit {
 
   })
   constructor(private route: ActivatedRoute, private router: Router, private httpClient: HttpClient,
-    private userServic: UsersService, public accountService: SessionService, private messageService: MessageService) {
-    
+    private userServic: UsersService, public accountService: SessionService, private messageService: MessageService)
+     {
       accountService.user.subscribe((u) => {
       this.userToEdit = u;
       if (u && u.roll != 'user') {
@@ -45,9 +45,6 @@ export class UpdateUserComponent implements OnInit {
       }
     });
   }
-
-
-
 
   userList?: Array<User>;
 

@@ -24,11 +24,13 @@ namespace web_api.Controllers
                 {
                     userslist = JsonSerializer.Deserialize<List<User>>(File.ReadAllText(@"E:\Angular\blogsystem\backend\web api\Users.json"));
                 }
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (userslist.Count > 0)
                 {
                     user = userslist.FirstOrDefault((x) => x.Email == email);
 
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
                 if (user == null)
                 {

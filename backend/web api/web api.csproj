@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="email.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
